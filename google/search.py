@@ -37,6 +37,3 @@ def getGoogleLinks(link):
             results_array.append(str(source_url[0].replace("q=","").replace("&amp","")))
     return results_array
 
-if __name__ == "__main__":
-    link = raw_input("Search Google for: ")
-    print getGoogleLinks(link)

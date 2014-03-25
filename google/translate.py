@@ -32,11 +32,3 @@ def getGoogleLanguages():
     # languages  languages.split("")
     # print languages[]
 
-if __name__ == "__main__":
-    print "Languages"
-    print "en = English, es = Spanish, ja = Japanese"
-#    print getGoogleLanguages()
-    home_language = raw_input("Home language: ")
-    target_language = raw_input("Target language: ")
-    text = raw_input("Translate: ")
-    print translate(home_language,target_language,text)
