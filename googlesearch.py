@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/env python2
 #
 # Perform a google search using python.
 import urllib
@@ -37,5 +37,6 @@ def getGoogleLinks(link):
             results_array.append(str(source_url[0].replace("q=","").replace("&amp","")))
     return results_array
 
-link = raw_input("Search Google for: ")
-print getGoogleLinks(link)
+if __name__ == "__main__":
+    link = raw_input("Search Google for: ")
+    print getGoogleLinks(link)
