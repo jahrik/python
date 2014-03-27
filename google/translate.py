@@ -32,7 +32,7 @@ import re
 #     languages  languages.split("")
 #     print languages[]
 def post_request(home_language,target_language,text):
-    post_url = "http://translate.google.com/translate_a/t"
+    post_url = "http://translate.google.com/translate_a/t?"
     parameters = {
         'client':'t',
         'text':text,
@@ -54,5 +54,11 @@ def post_request(home_language,target_language,text):
     browser = mechanize.Browser()
     browser.set_handle_robots(False)
     browser.addheaders = [('User-agent','Chrome')]
-    translate_text = browser.open(post_url,data).read().decode('UTF-8')
-    return translate_text
+    response = browser.open(post_url,data).read().decode('UTF-8')
+    translate_array = response.replace("[[[","").replace('["',"$$$").replace('"]',"$$$").split("$$$")
+    trans_string = ""
+    for block in translate_array:
+        trans_string +=block.split('","')[0]
+    
+    return trans_string.split("]")[0].replace(",","")[1:]
+
