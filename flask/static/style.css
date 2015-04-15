@@ -1,0 +1,15 @@
+#nav{
+  width: 200px;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+}
+
+#content{
+  width: 1000px;
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
