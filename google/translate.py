@@ -6,7 +6,7 @@ import urllib
 import mechanize
 
 def post_request(home_language,target_language,text):
-    post_url = "http://translate.google.com/translate_a/t?"
+    post_url = "http://translate.google.com/"
     parameters = {
         'client':'t',
         'text':text,
